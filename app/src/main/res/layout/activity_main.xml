@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_tab"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@color/colorPink">
+
+        <ImageView
+            android:id="@+id/iv_hearts"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logotrans" />
+
+        <TextView
+            android:id="@+id/titletitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_hearts"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/nunito"
+            android:text="TRIC DATING"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/iv_mail"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/titletitle"
+            android:src="@drawable/ic_mail" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/match_pic"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/header_tab"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/matchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/match_pic"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_dislike"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/match_name"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:letterSpacing="0.1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/btn_like"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_heart" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_profile"
+        style="@style/Platform.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/matchbar"
+        android:layout_marginTop="-30dp"
+        android:fontFamily="@font/nunito"
+        android:paddingLeft="10dp"
+        android:paddingTop="40dp"
+        android:paddingRight="10dp"
+        android:text="Age 27, Doctor at Aga Khan Hospital"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+</RelativeLayout>
